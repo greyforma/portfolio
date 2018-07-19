@@ -1,0 +1,3 @@
+
+<script type="text/javascript" src="{{asset('js/jquery.parallax-1.1.3.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.localscroll-1.2.7-min.js')}}"></script>

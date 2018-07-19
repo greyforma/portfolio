@@ -1,0 +1,45 @@
+{# templates/test.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="css/cover.css">{% endblock %}
+
+
+    {% block body %}
+
+
+
+            <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                <header class="masthead mb-auto">
+                    <div class="inner">
+                        <div class="animated flip">
+                            <h3 class="masthead-brand">Bienvenue...</h3>
+                        </div>
+                  </div>
+                </header>
+
+                <main role="main" class="inner cover animated zoomIn">
+                  <h1 class="cover-heading animated fadeIn">Portfolio</h1>
+                  <p class="lead text-justify">
+                    Je suis actuellement en formation au sein du groupe AFORMAC de Limoges (87).<br><br>
+
+                    Voici un petit tour d'horizon de nos réalisations dans le cadre de la formation de Web Developpeur.
+
+                    Ce site présente mon CV, en le parcourant vous pourrez avoir accès à certaines de mes réalisations, à mes expériences professionnelles ou encore à mes competences.
+
+
+                    Je vous souhaite une agréable visite.
+                </p><br><br>
+                    <p class="lead text-right">
+                        <a href="portfolio.php?#slide-1" class="btn btn btn-primary">Par ici...</a>
+                    </p>
+                </main>
+
+                <footer class="mastfoot mt-auto">
+                    <div class="inner">
+                        <p></p>
+                    </div>
+                </footer>
+             </div>
+
+
+    {% endblock %}

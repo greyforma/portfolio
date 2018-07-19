@@ -1,0 +1,294 @@
+{# templates/test.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Portfolio{% endblock %}
+
+
+{% block body %}
+
+<!-- navigation -->
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto navbar-collapse justify-content-md-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#accueil">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#comp">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projets">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cv">Formation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+<!--                        <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <div class="navisub">
+                            <a class="dropdown-item zoom" href="https://www.facebook.com/forma.grey" target="_blank"><i class="fab fa-2x fa-facebook" style="color:blue"></i> Facebook</a>
+                            <a class="dropdown-item zoom" href="https://www.linkedin.com/feed/?trk=" target="_blank"><i class="fab fa-2x fa-linkedin" style="color:blue"></i> LinkedIn</a>
+                            <a class="dropdown-item zoom" href="#https://github.com/formagrey/meme_generator.git" target="_blank"><i class="fab fa-2x fa-github-square skew" style="color:blue"></i> Gitub</a>
+                        </div>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- 1 section - Accueil -->
+    <div id="accueil" class="home">
+        <div class="col-xs-12 jumbotron">
+            <h1 class="text-center"><br><br>Portfolio</h1><br>
+            <div class="jumbotron">
+                <h3 class="text-justify">Je suis actuellement en formation au sein du groupe AFORMAC de Limoges (87).
+                          Voici un petit tour d'horizon de nos réalisations dans le cadre de la formation de Web Developpeur. Ce site présente mon CV, en le parcourant vous pourrez avoir accès à certaines de mes réalisations, à mes expériences professionnelles ou encore à mes competences. Je vous souhaite une agréable visite.
+                </h3>
+            </div>
+        </div>
+    </div>
+    <!-- S1 Accueil -->
+
+  <!-- 2 section - competences -->
+    <div id="comp">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center my-3">
+                    <img src="/images/icon/avatar.gif" alt="photo" class="avatar"/>
+                </div>
+                <div class="col-12 col-md-8 text-center back my-3">
+                    <h2>Competences</h2>
+
+                    <!-- <div class="img-fluid zoomscroll">
+                        <img src="/images/tun-num2.jpg" alt="" class="info">
+                    </div> -->
+
+                    <div class="row">
+                        <!--<img class="card-img-top" src="images/pc.jpg" alt="Card image cap">-->
+
+                        <div class="col-6 font">
+                            <h6 class="">Web / Dev : </h6>
+                            <i class="fab fa-html5"></i> HTML5 /
+                            <i class="fab fa-css3"></i> CSS3 <br>
+                            <i class="fab fa-php"></i> PHP /
+                            <i class="fas fa-database"></i> SQL <br>
+                            <i class="fab fa-js-square"></i> JAVASCRIPT
+                        </div>
+
+                          <!--<img class="card-img-top" src="images/pc.jpg" alt="Card image cap">-->
+                        <div class="col-6 font">
+
+                            <h6 class="">Graphisme : </h6>
+                            <i class="fas fa-camera-retro"></i> Corel PaintShop Pro<br>
+                            <img src="/images/icon/gimp.png" alt="logo gimp" class="mb-1">Gimp <br>
+                            <img src="/images/icon/krita24.png" alt="logo krita" class="mb-1">Krita
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /second section -->
+
+    <!-- 3em section - cv -->
+    <div id="cv" class="pad-section">
+        <div class="container">
+            <div class="row">
+                <div class="img-fluid zoomscroll">
+                    <img src="/images/estate.jpg" alt="" class="info">
+                </div>
+
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                    <!--bloc XP PRO-->
+                    <div class="card panel">
+                        <!--<img class="card-img-top img-fluid" src="images/pc.jpg" alt="Card image cap">-->
+                        <h2 class="text-center card-title panel-title">Experience pro :</h2>
+                        <div class="card-block ">
+                            <p class="">
+
+                                {% for i in cv %}
+                                <div class="year">{{ i.year }}</div><div>
+                                    <!-- <img src="/images/icon/logoidm.gif" alt="" class="info"> -->
+                                    <h4 class="text-left">{{ i.xp }} <br>
+                                    <img src="{{ i.img }}" alt="" class="logo"> {{ i.name }}</h4>{{ i.description }}</div>
+                                    <hr>
+                                {% endfor %}
+
+                            </p>
+                        </div>
+                    </div>
+                    <!--bloc XP PRO-->
+                </div>
+
+                <div class="col-xs-12 col-md-6 col-lg-6">
+
+                    <!--bloc XP PRO-->
+                    <div class="card panel">
+                        <!--<img class="card-img-top" src="images/pc.jpg" alt="Card image cap">-->
+                        <h2 class="text-center card-title panel-title">Formation :</h2>
+                        <div class="card-block panel-heading">
+                            <p class="card-text">
+
+                                <div class="year">2017 - 2018</div><div><h4 class="text-left">Formation Web développeur</h4></div>
+                                <img src="/images/icon/logoaformac.png" alt="aformac limoges" class="logoaformac"> AFORMAC Limoges<hr>
+
+                                <div class="year">1998</div><div><h4 class="text-left">FAC d'Histoire</h4></div>
+                                <img src="/images/icon/logoul.png" alt="université de limoges" class="logo"> Limoges<hr>
+                                <div class="year">1997 - 1998</div><div><h4 class="text-left">BAC PRO MRBT mention bien</h4>(Maintenance des Réseaux Bureautique et Télématiques)
+                                <br><img src="/images/icon/logomb.png" alt="LYCEE MARYSE BASTIE" class="logoaformac"> Lycée Maryse Bastié
+                                </div>
+                                <hr>
+                                <div class="year">1995</div><div><h4 class="text-left">BEP Electronique</h4></div>
+                                <img src="/images/icon/logomb.png" alt="LYCEE MARYSE BASTIE" class="logoaformac"> Lycée Maryse Bastié
+
+                        </div><br>
+                    </div>
+                        <!--bloc XP PRO-->
+                </div>
+
+                    <div class="col-xs-12 col-md-6 offset-md-2 col-lg-8">
+                        <!--bloc stage-->
+                        <div class="card panel">
+                            <!--<img class="card-img-top" src="images/pc.jpg" alt="Card image cap">-->
+                            <h2 class="text-center card-title panel-title">Stages :</h2>
+                            <div class="card-block panel-heading">
+                                <p class="card-text">
+                                    <div class="year">1998 (Mars)</div><div><h4 class="text-left">Stage technicien informatique
+                                    ISTA Limoges </h4>Préparation, et livraison de matériel pour la CARSAT et Valéo</div>
+                                    <hr>
+                                    <div class="year">1997 (Mai)</div><div><h4 class="text-left">Stage technicien informatique
+                                        DIRECTS LOGICIELS</h4>Assemblage, préparation vente, récupération de données / sauvegardes</div>
+                                    <br>
+                                    <div class="year">1996 (novembre)</div><div><h4 class="text-left">Stage d’électronique en Angleterre
+                                        J&A CROWHURST </h4>Installation  et déploiement divers, câblages, interrupteurs prises électrique panneau d’affichage électronique</div>
+                                </p>
+                            </div>
+                        </div>
+                    <!--bloc stage-->
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3eme section -->
+
+    <!-- 4eme section - projets -->
+    <div id="projets" class="pad-section">
+        <div class="container">
+            <h2 class="text-center">Exemples de projets</h2> <hr />
+            <div class="row text-center">
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="/sitecv/projets">
+                    <div class="tailleimg zoom">
+                        <img class="" src="../images/icon/pongilong184.png">
+                    </div>
+                    <h5>Jeu-Pongilong</h5></a>
+
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="/sitecv/projets">
+                    <div class="tailleimg zoom">
+                        <img class="" src="../images/icon/blogger-icon180.png">
+                    </div>
+                    <h5>Mini-Blog</h5></a>
+
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="/sitecv/projets">
+                    <div class="tailleimg zoom">
+                        <img class="" src="../images/icon/blogger-spy.png">
+                    </div>
+                        <h5>Générateur de Meme</h5></a>
+
+                    </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="/sitecv/projets">
+                    <div class="tailleimg zoom">
+                        <img class="" src="../images/icon/wordpress.png">
+                    </div>
+                    <h5>Wordpress</h5></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4eme section -->
+
+    <!-- 5 section - test -->
+    <div id="sec5" class="pad-section">
+        <div class="col-xs-12">
+            <div class="">
+                <div class="img-fluid ">
+                 <!-- <img src="images/tun-num2.jpg" alt="" class="info">-->
+                </div>
+                <h3 class="text-justify">
+
+                </h3>
+                <!-- <div id="map" style="width:100%;height:500px" class="google">
+
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+      <!-- S1 gest -->
+
+      <!-- 5eme section -->
+    <div id="contact_zone" class="pad-section">
+        <div class="container text-center">
+            <h2 class="col-4 offset-4">Contact</h2>
+            <div class="row">
+
+                <div class="jumbotron col-xs-12 col-md-5 order-md-2 animated fadeInDown">
+                    <br> <p id="typedtext"></p> <br>
+                </div>
+
+                <div class="col-xs-12 col-md-6 order-md-1 formulaire">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                        <input type="submit" class="btn btn-info" value="Envoyer" />
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5eme section -->
+
+
+
+    <footer class="">
+
+      <div class="container text-center">
+        <span>
+            <a href="https://www.facebook.com/forma.grey" target="blank"><i class="fab fa-2x fa-facebook skew" style="color:rgb(135, 138, 142)"></i></a>
+        </span>
+        <span>
+            <a href="https://www.linkedin.com/feed/?trk=" target="_blank"><i class="fab fa-2x fa-linkedin skew" style="color:rgb(135, 138, 142)"></i></a>
+        </span>
+        <span>
+            <a id="github" href="https://github.com/formagrey/" target="_blank"><i class="fab fa-2x fa-github-square skew" style="color:rgb(135, 138, 142)"></i></a>
+        </span>
+      </div>
+    </footer>
+
+{% endblock %}

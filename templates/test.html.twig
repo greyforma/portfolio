@@ -1,0 +1,33 @@
+{# templates/test.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+    {% block body %}
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center col-12">Titre</h1>
+            </div>
+            <div class="text-center">
+                {% for i in 0..2 %}
+                    <h2>test</h2>
+                {% endfor %}<br>
+
+                {% for letter in 'a'..'z' %}
+                    / {{ letter }}
+                {% endfor %}<br>
+
+                {% for letter in 'a'|upper..'z'|upper %}
+                    * {{ letter }}
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                {% do 1 + 2 %}
+            </div>
+            <div class="text-center">
+                {% set temperature = '19' %}
+                {% if temperature > 18 and temperature < 27 %}
+                    <p>It's a nice day for a walk in the park.</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endblock %}

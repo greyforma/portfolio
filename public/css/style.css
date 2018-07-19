@@ -1,0 +1,431 @@
+/* Police utilisable
+font-family: 'Coiny', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Itim', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Nanum Brush Script', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Caveat', cursive;
+class "bis" page projets
+*/
+
+
+html, body {
+    background-color: unset;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
+    line-height: 2;
+    z-index: 0;
+}
+
+h1{
+    font-family: 'Coiny', cursive;
+    color: rgb(233, 143, 22);
+}
+h4{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+}
+
+h2{font-weight: bold;}
+
+
+h5, h2{color:rgb(250, 250, 250);}
+
+/* couleur des année dans la boucle xp pro */
+.year{color:rgba(77, 82, 87, 0.89);}
+
+.icon24{width: 24px;}
+
+.pad-section {
+    padding: 50px 0;
+}
+.pad-section img {
+    width: 100%;
+}
+/* card  custom*/
+ .panel {
+    text-align: justify; padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 70px 0px 70px 0px / 70px 5px 70px 0px;
+}
+/* texte vertical-centé */
+.text-vcenter {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.text-vcenter h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+/*text */
+.float-left{
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+/* sections */
+#accueil {
+    background: url(../images/accueil.jpg) no-repeat center center fixed;
+    display: table;
+    height: 60%;
+    width: 100%;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;*/
+    background-size: cover;
+    position: relative;
+}
+
+#accueil .jumbotron{background-color: rgba(33, 33, 33,0.4);
+    margin-bottom: 0px;
+    color:white;
+    height: 100%;
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 0px;
+}
+
+#accueil .jumbotron .jumbotron{
+    background-color: unset;
+    height: 100%;
+    margin-top: 0px;
+    width: 100%;
+}
+
+#comp {
+    background-color: rgba(48, 109, 159, 0.85);
+    /* background-color: rgba(33, 33, 33,0.4); */
+    min-height: 270px;
+    font-size: 23px;
+    /* color:darktan; */
+    z-index: 10;
+}
+
+#comp h6{color:white;}
+#comp .avatar {
+    margin-top: 10px;
+    width: 280px;
+    border-radius: 50%;
+}
+
+#comp .font{
+    font-family: 'Coiny', cursive;
+    color:silver;
+}
+#comp .back{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius:70px;
+
+    border-radius: 70px 0px 70px 0px / 70px 5px 70px 0px;
+    padding-bottom:15px
+}
+
+#projets {
+    background-color: rgba(48, 109, 159, 0.90);
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+
+#projets .glyphicon {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 60px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+#projets .tailleimg{height: 192px;background-color: transparent;}
+
+#projets img {width: 180px}
+
+#projets a{text-decoration: none;}
+
+#cv {
+    background: url(../images/accueil.jpg) no-repeat center center fixed;
+    display: table;
+    height: 800px;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.info{
+    opacity: 0.55;
+}
+#cv .panel {
+    opacity: 0.85;
+}
+
+#cv .logo{
+    width: 48px;
+}
+#cv .logoaformac{
+    width: 100px;
+}
+
+#sec5{
+    /* background-image: url(../images/analytics.jpg); */
+    background: url(../images/accueil.jpg) no-repeat center center fixed;
+    background-color: #373C42;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50%;
+    height: 300px;
+    z-index: -1
+}
+
+@media all and (max-width: 1024px){
+    #contact_zone {
+    min-height: 1300px;
+    background-image: url(../images/smartphone.jpg);
+    background-size: cover;
+    /* background-color: rgba(48, 109, 159, 0.90); */
+    color: #ffffff;
+    z-index: 2;
+    }
+ }
+
+#contact_zone {
+    height: 800px;
+    background-image: url(../images/smartphone.jpg);
+    background-size: cover;
+    /* background-color: rgba(48, 109, 159, 0.90); */
+    color: #ffffff;
+    z-index: 2;
+}
+
+#contact_zone .jumbotron{
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-weight: bolder;
+    font-size: 30px;
+    border: 3px ridge #bbbbbb;
+    border-radius: 50px;
+}
+
+#contact_zone h2{
+    padding: 10px;
+    margin-bottom: 50px;
+    /* background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px; */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+}
+
+#comp li{margin-left: 20px;}
+
+#comp h6{
+    /* writing-mode: vertical-rl;
+    text-orientation: sideways; */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+    font-size: 25px;
+    padding-top:15px;
+    padding-bottom:15px;
+    /* margin: 0;
+    padding: 0; */
+    /* -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+         -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg); */
+}
+#comp h2{
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+
+}
+
+
+.card-title{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+}
+
+.card{margin-bottom: 35px;
+    border: 3px ridge #bbbbbb;
+    padding: 0px;
+}
+
+.panel-heading,.card-block,.card-title{padding:20px;}
+
+footer {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: rgb(55, 60, 66);S
+}
+
+footer span{margin-right: 50px;}
+
+.footer i{padding-bottom: 20px;}
+
+/* page projets */
+.footerbis{
+    width: 100%
+    /* min-height: 1px; */
+    /* position: absolute; */
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background-color: rgb(55, 60, 66);
+}
+
+#projetsbis .jumbotron{
+    background-color: unset;
+}
+#projetsbis {
+    /* position: relative; */
+    background-color: rgba(48, 109, 159, 0.85);
+}
+
+/* correction de la hauteur du fond d'écran en grand format */
+@media all and (min-width: 1024px){
+    #projetsbis{
+        height:100vh;
+        background-color: rgba(48, 109, 159, 0.85);
+    }
+ }
+
+#projetsbis p{
+    color:white;
+    font-size:25px;
+    text-decoration: none;
+}
+#projetsbis .tailleimg{height: 192px;background-color: transparent;}
+
+#projetsbis img {
+    width: 180px
+}
+#projetsbis a{
+    text-decoration: none;
+}
+
+.pong{
+    /* background-image: url("../images/icon/pongilonghi.png"); */
+}
+
+.nav-link-{
+    margin:0;
+    padding: 0;
+}
+
+/* modal  */
+.modal-header{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+}
+.modal-content{
+    background-color: rgba(55, 60, 66, 0.7);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+}
+
+.modal-body{color:white;}
+
+.modal h5{margin-left: 5%;}
+
+/*effects sur les icônes media*/
+
+.zoom {
+	transition-property: transform;
+	-webkit-transition-property: transform;
+    transition-duration: .5s;
+	transition-timing-function: ease-out;
+	}
+
+.zoom:hover {
+	transform: scale(1.2);
+   	-webkit-transform: scale(1.2);
+}
+
+.skew {
+	transition: transform 0.5s ease-out;
+	-webkit-transition: transform 0.5s ease-out;
+	}
+
+.skew:hover {
+   	transform: skew(45deg);
+   	-webkit-transform: skew(45deg);
+   }
+
+.rotate {
+    transition-property: transform, width, height, top;
+   	-webkit-transition-property: transform, width, height, top;
+       transition-duration: .5s;
+   	transition-timing-function: ease-out;
+   	position: relative;
+   	}
+
+.rotate:hover {
+   	transform: rotate(45deg);
+   	-webkit-transform: rotate(45deg);
+   	width:80px;
+   	height:80px;
+   	top: 20px;
+   	}
+
+/*scroll*/
+.zoomscroll{
+    overflow: hidden;
+    padding-bottom: 55%;
+}
+
+.zoomscroll img{
+    position: fixed;
+    top: 0%;
+    left: 60%;
+
+    transform: translateX(-60%);
+    z-index: -1
+}
+
+/* form */
+label{color:lightblue;}
+.formulaire{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 60px 0px 60px 0px / 70px 5px 70px 0px;
+    padding: 15px;
+
+    font-weight: bold;
+    font-size: .8em;
+}
+
+textarea{ resize:none;}
+
+.form-control{
+     font-size: 22px;
+     font-weight: bold;
+}

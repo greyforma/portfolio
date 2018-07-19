@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <script src="/js/jquery-3.3.1.min.js"></script>
+
+
+        {% block stylesheets %}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/cover.css')}}">
+            <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+            <link href="{{asset('https://fonts.googleapis.com/css?family=Caveat|Coiny|Dancing+Script|Gloria+Hallelujah|Itim|Kaushan+Script|Lobster|Nanum+Brush+Script|Pacifico|Permanent+Marker|Satisfy|Shadows+Into+Light')}}" rel="stylesheet">
+
+
+
+        {% endblock %}
+    </head>
+
+
+
+
+
+
+
+
+{% block body %}
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <div class="animated flip">
+                        <h3 class="masthead-brand">Bienvenue...</h3>
+                    </div>
+              </div>
+            </header>
+
+            <main role="main" class="inner cover animated zoomIn">
+              <h1 class="cover-heading animated fadeIn">Portfolio</h1>
+              <p id="typedtextaccueil" class="lead text-justify">
+                Je suis actuellement en formation au sein du groupe AFORMAC de Limoges (87).<br><br>
+
+                Voici un petit tour d'horizon de nos réalisations dans le cadre de la formation de Web Developpeur.
+
+                Ce site présente mon CV, en le parcourant vous pourrez avoir accès à certaines de mes réalisations, à mes expériences professionnelles ou encore à mes competences.
+
+
+                Je vous souhaite une agréable visite.
+            </p><br><br>
+                <p class="lead text-right">
+                    <a href="sitecv" class="btn btn btn-primary">Par ici...</a>
+
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p></p>
+                </div>
+            </footer>
+        </div>
+    {% endblock %}
+    {% block javascripts %}
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script type="text/javascript" src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/ScrollToPlugin.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
+
+    {% endblock %}
+    </body>
+</html>

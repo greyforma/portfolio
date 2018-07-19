@@ -1,0 +1,263 @@
+
+{# templates/test.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Projets{% endblock %}
+
+
+
+{% block body %}
+
+<!-- navigation -->
+
+    <header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
+        <a class="navbar-brand" href="#">Portfolio mes projets</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto navbar-collapse justify-content-md-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('sitecv') }}">Accueil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/sitecv#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="projetsbis" class="">
+
+        <h2 class="text-center"> <br><br><br> Quelques exemples de projet</h2>
+
+        <form class="container" action="" method="post">
+
+        <div id="projetspage" class="pad-section">
+            <div class="">
+                <hr />
+                <div class="row  text-center">
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="#projet1Modal" data-toggle="modal">
+                        <div class="tailleimg zoom">
+                            <img class="" src="../images/icon/pongilong184.png">
+                        </div>
+                        <h4>Jeu-Pongilong</h4>
+                        <p>Remake du jeu pong réalisé en javascript sur le thème du football</p>
+                    </div></a>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <a href="#projet2Modal" data-toggle="modal">
+                        <div class="tailleimg zoom">
+                            <img class="" src="../images/icon/blogger-icon180.png">
+                        </div>
+                        <h4>Mini-Blog</h4>
+                        <p>Réalisation d'un minou-blog from scratch</p>
+                    </div></a>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <a href="#projet3Modal" data-toggle="modal">
+                        <div class="tailleimg zoom">
+                            <img class="" src="../images/icon/blogger-spy.png">
+                        </div>
+                            <h4>Générateur de Meme</h4>
+                            <p>Permet d'ajouter un texte à une image et de la partager</p>
+                        </div></a>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <a href="#projet4Modal" data-toggle="modal">
+                        <div class="tailleimg zoom">
+                            <img class="" src="../images/icon/wordpress.png">
+                        </div>
+                        <h4>Intégration</h4>
+                        <p>Intégration de template sous Wordpress</p>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+        <!-- Modal projet 1 -->
+        <div class="modal fade" id="projet1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg pong" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Jeu Pongilong</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contact-form_login" class="" action="controller/signIn.php" method="post" role="form">
+                            <div class="row">
+                                <div class="col-6">Durée du projet  : 2,5 jours</div>
+
+                                <div class="col-6 text-center">Projet 2 personnes</div>
+
+                                <p class="col-12"><br>Remake du jeu pong réalisé en javascript sur le thème du football</p>
+                                <p class="col-12">Sur le thème du célèbre jeu de tennis Pong avec un design remanié foot<br>
+                                    Le mini jeu permet de jouer à 2 joueurs <br>
+                                 <br>
+
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projet 2 -->
+        <div class="modal fade" id="projet2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mini Blog</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="" class="" action="" method="post" role="form">
+                            <div class="row">
+                                <div class="col-6">Durée du projet  : 2,5 jours</div>
+
+                                <div class="col-6 text-center">Projet 2 personnes</div>
+
+                                <p class="col-12"><br>Site de type blog, en php/mysql. Réalisé from scratch avec bootstrap 4</p>
+                                <p class="col-12">Stockage des messages en base de donnée <br>
+                                    Affichage des dernier messages sur la page d'accueil <br>
+                                    Possibilité de trier les messages par catégorie <br>
+
+                                </p>
+
+
+
+                                <!-- Exemple de navigation :
+
+                                En arrivant sur le site, j'ai le titre et le début du texte des
+                                derniers articles publiés, du plus récent au moins récent. Quand je
+                                clique sur un article, le site l'affiche en entier.
+
+                                Sur la page d'accueil, je peux sélectionner une catégorie et filtrer
+                                les articles. Je peux également accéder aux articles plus anciens. La
+                                page d'accueil ne doit pas afficher tous les articles mais seulement
+                                un certain nombre (par exemple 10) pour ne pas surcharger la page.
+
+                                Un bouton permet à tout moment d'écrire un nouvel article : l'auteur
+                                doit spécifier son nom et son mail. Lorsqu'il valide, l'article est
+                                ajouté à la base.
+
+                                Prévoir un design responsive, mobile-first, avec bootstrap et sass.
+
+                                1) Cerner précisément les fonctionnalités que vous voulez offrir.
+                                2) Concevoir le modèle de données : le schéma relationnel de la base.
+                                3) Appelez-moi pour valider ces deux étapes.
+                                4) Répartissez vous le codage.
+
+                                Fonctionnalités optionnelles à ajouter :
+                                => Faire l'ensemble du site en JQuery.
+                                => Ajouter des mots-clé sur les articles, autoriser l'utilisateur à parcourir les articles par mots-clé.
+                                => Ajouter un champs recherche.
+                                => Gérer la pagination des listes d'articles : par exemple 10 articles par page.
+                                => Embarquer un éditeur wysiwyg (type tinyMCE) pour permettre de mettre en forme le texte des articles
+                                => Gérer des comptes utilisateurs : autoriser l'écriture d'article aux auteurs enregistrés avec un mot de passe. -->
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projet 3 -->
+        <div class="modal fade" id="projet3Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Meme generator</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="" class="" action="" method="post" role="form">
+                            <div class="row">
+                                <div class="col-6">Durée du projet  : 4 jours</div>
+
+                                <div class="col-6 text-center">Projet 4 personnes</div>
+
+                                <p class="col-12"><br>Générateur de meme</p>
+                                <p class="col-12">Ce générateur permet d'intégrer des messages <br>
+                                    sur le haut et sur le bas de l'image sélectionné dans une liste proposé <br>
+                                    Possibilité de partager le lien a ses amis ou de télécharger l'image <br>
+
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projet 4 -->
+        <div class="modal fade" id="projet4Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Wordpress</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contact-form_login" class="" action="controller/signIn.php" method="post" role="form">
+                            <div class="row">
+                                <div class="col-6">Durée du projet  : 4 jours</div>
+
+                                <div class="col-6 text-center">Projet 2 personnes</div>
+                                <p>
+                                    <br> Projet réalisé de la façon suivante : <br>
+                                Travail en binome : un seul qui code à la fois.
+                                Installer wordpress et le faire marcher sur sa machine.
+
+                                Créer une nouvelle page template.
+                                WP fonctionne sur le principe des templates, des fichiers php qu'il utilise pour rendre les articles.
+                                On demande de créer une nouvelle page template dans votre thème, de manière à pouvoir la sélectionner
+                                quand on crée un nouvelle page dans l'interface admin de WP.
+
+                                Créer un thème - intégrer une maquette
+                                Choisir, sur internet un thème payant qui vous plait (par exemple sur un site comme www.templatemonster.com.
+                                Le Reproduire en HTML/SASS/Bootstrap, et l'intégrer sous la forme d'un nouveau thème wordpress.
+                                </p>
+                                <!-- Ressources ; n'hésitez pas à ajouter ce que vous trouverez de bien
+                                https://codex.wordpress.org/Theme_Development : article officiel de wordpress qui explique pas à pas le déveeloppementd'un thème.
+                                https://developer.wordpress.org/themes/basics/template-hierarchy/ explique la hiérarchie des templates wp : comment wp choisit un template en fonction de la requete de l'utilisateur et des fichiers template disponibles dans le theme. -->
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="footerbis container-fluid">
+
+          <div class="container text-center">
+            <span>
+                <a href="https://www.facebook.com/forma.grey" target="blank"><i class="fab fa-2x fa-facebook skew" style="color:rgb(135, 138, 142)"></i></a>
+            </span>
+            <span>
+                <a href="https://www.linkedin.com/feed/?trk=" target="_blank"><i class="fab fa-2x fa-linkedin skew" style="color:rgb(135, 138, 142)"></i></a>
+            </span>
+            <span>
+                <a id="github" href="https://github.com/formagrey/" target="_blank"><i class="fab fa-2x fa-github-square skew" style="color:rgb(135, 138, 142)"></i></a>
+            </span>
+          </div>
+        </div>
+    </div> -->
+
+    {% endblock %}

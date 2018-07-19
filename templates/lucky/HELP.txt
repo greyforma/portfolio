@@ -1,0 +1,16 @@
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+// ...
+public function index()
+{
+    // retrieve the object from database
+    $product = ...;
+    if (!$product) {
+        throw $this->createNotFoundException('The product does not exist');
+
+        // the above is just a shortcut for:
+        // throw new NotFoundHttpException('The product does not exist');
+    }
+
+    return $this->render(...);
+}

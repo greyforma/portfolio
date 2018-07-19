@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salut{% endblock %}
+
+{% block body %}
+    {% for product in products %}
+        <p>{{ product.getName() }}</p>
+        <small>{{ product.getPrice() }}</small>
+    {% endfor %}
+{% endblock %}

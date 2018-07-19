@@ -1,0 +1,45 @@
+{# templates/test.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+    {% block body %}
+    <!-- 1ere Section Parallax -->
+            <div class="col-12 jumbotron paral paralsec">
+                <h1 class="display-3">titre</h1>
+                <p class="lead">description</p>
+                <p class="lead">
+                <a class="btn btn-info btn-lg btn-md" href="#2" role="button">Acces2</a>
+                </p>
+                <div class="text-center">
+                    <div id="div1"><h2>jQuery</h2></div>
+                    <button id="jq">jq</button>
+                </div>
+            </div>
+
+
+    <!-- 2eme Section Parallax -->
+        <div id="2" class="jumbotron paral paralsec1">
+            <h1 class="display-3">titre</h1>
+            <p class="lead">description</p>
+            <p class="lead">
+            <a class="btn btn-warning btn-lg btn-md" href="#3" role="button">acces 3</a>
+            </p>
+        </div>
+
+    <!-- 3eme Section Parallax -->
+        <div id="3" class="jumbotron paral paralsec2">
+            <h1 class="display-3">titre</h1>
+            <p class="lead">description </p>
+            <p class="lead">
+            <a class="btn btn-primary btn-lg btn-md" href="#" role="button">retour haut</a>
+            </p>
+        </div>
+
+    <!-- Footer -->
+    <footer class="wn-footer">
+        <p> <a href="#"></a>#</p>
+        <p>
+        <a href="#">retour haut</a>
+        </p>
+    </footer>
+    {% endblock %}
